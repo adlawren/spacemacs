@@ -41,6 +41,9 @@
     go-mode
     go-rename
     go-tag
+    (go-tmp :location (recipe
+                       :fetcher github
+                       :repo "adlawren/go-tmp.el"))
     godoctor
     popwin))
 
@@ -181,6 +184,12 @@
     :init (spacemacs/set-leader-keys-for-major-mode 'go-mode
             "rf" 'go-tag-add
             "rF" 'go-tag-remove)))
+
+(defun go/init-go-tmp ()
+  (use-package go-tmp
+    :init (spacemacs/set-leader-keys-for-major-mode 'go-mode
+            "xr" 'go-tmp-region
+            "xR" 'go-tmp-region-focus)))
 
 (defun go/init-godoctor ()
   (use-package godoctor

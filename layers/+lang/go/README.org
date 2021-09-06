@@ -284,6 +284,8 @@ prefix it with =-= to exclude a package from searching.
 | ~SPC m t s~   | run "go test" for the suite you're currently in (requires gocheck)                    |
 | ~SPC m t t~   | run "go test" for the function you're currently in (while you're in a _.test.go file) |
 | ~SPC m x x~   | run "go run" for the current 'main' package                                           |
+| ~SPC m x r~   | go-tmp region
+| ~SPC m x R~   | go-tmp region and switch to go-tmp buffer
 
 ** Go Guru
 
